@@ -39,7 +39,7 @@ See more technical details in the [Technical Background](#technical-background) 
 
 # Installation
 
-`naipng` is available on PyPI, so it can be installed through `pip`:
+[`naipng` is available on PyPI](https://pypi.org/project/naipng), so it can be installed through `pip`:
 
 ```bash
 python -m pip install naipng
