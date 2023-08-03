@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "naipng"
-version = "1.0.0.post3"
+version = "1.0.0.post2"
 license = { text = "zlib/libpng License" }
 keywords = ["novelai", "nai", "png", "cli"]
 authors = [

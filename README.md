@@ -1,5 +1,4 @@
 # naipng ✒️🖼️
-<a id="naipng"></a>
 
 `naipng` is a Python library and command-line tool to read [NovelAI](https://novelai.net)
 data encoded in PNG files (like in Lorebook cards and generated images), with no dependencies.
@@ -8,7 +7,6 @@ Also check out my website [pngmeta](https://pngmeta.glitch.me) for a browser-bas
 [viewing](https://pngmeta.glitch.me) and [copying](https://pngmeta.glitch.me/transfer) PNG `tEXt` metadata.
 
 # Table of Contents
-<a id="table-of-contents"></a>
 
 - [What Is This?](#what-is-this)
 - [Installation](#installation)
@@ -23,7 +21,6 @@ Also check out my website [pngmeta](https://pngmeta.glitch.me) for a browser-bas
 - [License](#license)
 
 # What Is This?
-<a id="what-is-this"></a>
 
 User-made content for the web service [NovelAI](https://novelai.net) is often shared off-platform in the form of files.
 These files take on multiple formats. Though most are simple JSON, some content can be shared embedded within PNGs,
@@ -41,7 +38,6 @@ Both domains use PNG metadata to encode this information, thus this tool allows 
 See more technical details in the [Technical Background](#technical-background) section.
 
 # Installation
-<a id="installation"></a>
 
 `naipng` is available on PyPI, so it can be installed through `pip`:
 
@@ -53,12 +49,10 @@ Since `naipng` has no dependencies, you can also import or run it by simply addi
 to your source tree.
 
 # Usage
-<a id="usage"></a>
 
 `naipng` may be used either as a [library](#library) or a [command-line tool](#cli).
 
 ## Library
-<a id="library"></a>
 
 The primary function entrypoint provided by `naipng` is `naipng.read(file: bytes | BinaryIO)`.
 This can be used to parse a PNG image for NovelAI metadata from either an open file or a `bytes` object in memory.
@@ -71,7 +65,6 @@ Two more specific variations of `naipng.read()` also exist:
   - *E.g. image prompts*
 
 ### `naipng.read()` Example
-<a id="naipngread-example"></a>
 
 ```python
 import naipng
@@ -102,7 +95,6 @@ decoded = naipng.read(data)
 ```
 
 ### Error Handling
-<a id="error-handling"></a>
 
 `naipng` defines two error types for `naipng.read()` and its variants:
 
@@ -141,12 +133,10 @@ Error: not a valid PNG file: ends prematurely
 ```
 
 ## CLI
-<a id="cli"></a>
 
 `naipng` may be invoked on the command line as either `python -m naipng <file>` or simply `naipng <file>`.
 
 ### Help Text
-<a id="help-text"></a>
 
 ```
 usage: naipng [-h] [-q] [-c] [-t] [-i] file [outfile]
@@ -166,7 +156,6 @@ options:
 ```
 
 ### Examples
-<a id="examples"></a>
 
 - Printing to stdout:
 
@@ -204,14 +193,12 @@ Everyone said that no man now living or ever after would be born who would be eq
 ```
 
 #### Trivia
-<a id="trivia"></a>
 
 The linked file is the first Lorebook card shared as an example when PNG embedding was announced.
 Its art is by Tarmillustrates.
 The quote in it is from *[Þiðreks saga](https://en.wikipedia.org/wiki/%C3%9Ei%C3%B0reks_saga)*.
 
 # Technical Background
-<a id="technical-background"></a>
 
 PNGs are made up of a sequence of data chunks.
 Beyond those used to store visual information (e.g. pixels, palettes),
@@ -231,6 +218,5 @@ to encode most metadata.
     - `naipng` assumes that the first JSON-encoded `Comment` `tEXt` chunk found is valid image generation metadata.
 
 # License
-<a id="license"></a>
 
 `naipng` is free and open-source software provided under the [zlib license](https://opensource.org/licenses/Zlib).
