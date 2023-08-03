@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "naipng"
+version = "1.0.0"
+license = { text = "zlib/libpng License" }
+keywords = ["novelai", "nai", "png", "cli"]
+authors = [
+  { name="Eta" }
+]
+description = "Library and command-line tool to read NovelAI data encoded in PNG files"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: zlib/libpng License",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: File Formats",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers"
+]
+
+[project.scripts]
+naipng = "naipng.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Eta0/naipng"
+
+[tool.black]
+line-length = 80
+target-version = ["py37", "py38", "py39", "py310", "py311"]
+preview = true
+
+[tool.isort]
+profile = "black"
+line_length = 80
+src_paths = ["naipng/"]
+use_parentheses = true
