@@ -75,7 +75,7 @@ with open("image.png", "rb") as file:
 
 if decoded is None:
     # No NovelAI data found encoded in the image
-    parsed = {}
+    print("N/A")
 else:
     # naipng.read() returns a dict object representing the first data found
     for k, v in decoded.items():

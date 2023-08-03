@@ -149,7 +149,7 @@ def read(file: Union[bytes, BinaryIO]) -> Optional[dict]:
 
             if decoded is None:
                 # No NovelAI data found encoded in the image
-                parsed = {}
+                print("N/A")
             else:
                 # naipng.read() returns a dict object
                 # representing the first data found
@@ -230,7 +230,7 @@ def read_text_gen(file: Union[bytes, BinaryIO]) -> Optional[dict]:
 
             if decoded is None:
                 # No NovelAI text generation data found encoded in the image
-                parsed = {}
+                print("N/A")
             else:
                 # naipng.read_text_gen() returns a dict object
                 # representing the first data found
@@ -311,7 +311,7 @@ def read_image_gen(file: Union[bytes, BinaryIO]) -> Optional[dict]:
 
             if decoded is None:
                 # No NovelAI data found encoded in the image
-                parsed = {}
+                print("N/A")
             else:
                 # naipng.read_image_gen() returns a dict object
                 # representing the first data found
