@@ -49,7 +49,7 @@ def main():
               %(prog)s - < image.png > naidata.json
 
               (with external tools curl & jq)
-              curl -fs https://files.catbox.moe/3b6dux.png | %(prog)s -c image.png | jq
+              curl -fs https://files.catbox.moe/3b6dux.png | %(prog)s -c - | jq
         """),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
