@@ -4,7 +4,7 @@
 data encoded in PNG files (like in Lorebook cards and generated images), with no dependencies.
 
 Also check out my website [pngmeta](https://pngmeta.glitch.me) for a browser-based tool for
-[viewing](https://pngmeta.glitch.me) and [copying](https://pngmeta.glitch.me) PNG `tEXt` metadata.
+[viewing](https://pngmeta.glitch.me) and [copying](https://pngmeta.glitch.me/transfer) PNG `tEXt` metadata.
 
 # Table of Contents
 
